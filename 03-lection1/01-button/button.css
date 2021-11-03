@@ -1,1 +1,38 @@
 /* Стилизация кнопки */
+.btn {
+    display: inline-block;
+    width: 189px;
+    height: 48px;
+    border: 1px solid #000000;
+    background-color: #fff;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    cursor: pointer;
+}
+.btn:disabled  {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.btn_primary {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+}
+.btn_secondary {
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--white);
+}
+.btn_alternate {
+    border: 1px solid var(--grey-3);
+    background-color: var(--white);
+    color: var(--grey-4);
+}
