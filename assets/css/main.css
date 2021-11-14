@@ -11,6 +11,8 @@
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
+    --grey-5: hsl(200, 20%, 70%);
+    --grey-6: hsl(200, 20%, 95%);
 
     --error: var(--red);
     --success: var(--blue);
