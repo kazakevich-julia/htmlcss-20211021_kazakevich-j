@@ -1,5 +1,5 @@
 (function () {
-    const close = document.getElementById('modal-close');
+    const close = document.getElementById('modal__button-close');
     const modal = document.getElementById('modal');
     const modalOpen = document.getElementById('modal-open');
 
