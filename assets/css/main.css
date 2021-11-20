@@ -15,6 +15,7 @@
     --grey-3: #ACB5BD;
     --grey-4: #495057;
     --grey-7: #90A0B7; 
+    --grey-8: rgba(58, 56, 56, 0.86);
 
     --error: var(--red);
     --success: var(--blue);
@@ -37,7 +38,8 @@ body {
     margin: 0 auto;
     max-width: 1110px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: content-box;
+    padding: 0 15px;
 }
 
 main {
