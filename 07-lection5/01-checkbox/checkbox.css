@@ -1,5 +1,10 @@
 .checkbox {
     display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.checkbox:last-child {
+    padding-bottom: 0;
 }
 
 .checkbox__input {

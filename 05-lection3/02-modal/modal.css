@@ -1,23 +1,48 @@
 .modal {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: var(--grey-8);
+
+    z-index: 888;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_type_preview {
+    position: relative;
+    width: 250px;
+    padding: 1rem 1rem;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal__dialog {
     background: var(--white);
     border-radius: 8px;
-    width: 70%;
-    padding: 30px 40px;
-    margin: 15% auto;
+    max-width: 450px;
+    padding: 1rem 2rem;
     position: relative;
+    margin: 15% auto;
 }
 
-#modal__button-close {
+.modal__dialog_type_preview {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+}
+
+.modal__button_close {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -26,7 +51,7 @@
     transition: 0.4s;
     cursor: pointer;
 }
-#modal__button-close:hover {
+.modal__button_close:hover {
     transform: scale(1.5);
 }
 

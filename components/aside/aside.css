@@ -1,0 +1,22 @@
+.sidebar, .sidebar__menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__menu a {
+    display: inline-flex;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.sidebar__menu a {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar__menu a:hover {
+    font-weight: bold;
+}
+
+.sidebar__menu a.active {
+    color: var(--red);
+}

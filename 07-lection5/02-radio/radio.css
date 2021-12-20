@@ -1,5 +1,10 @@
 .radio {
     display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.radio:last-child {
+    padding-bottom: 0;
 }
 
 .radio__input {

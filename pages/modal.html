@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- Modal component -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/helpers.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/resrt.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../components/page/page.css">
+    <link rel="stylesheet" href="../components/header/header.css">
+    <link rel="stylesheet" href="../components/footer/footer.css">
+    <link rel="stylesheet" href="../components/tabs/tabs.css">
+    <link rel="stylesheet" href="../components/aside/aside.css">
+    <link rel="stylesheet" href="../03-lection1/01-button/button.css">
+    <link rel="stylesheet" href="../05-lection3/02-modal/modal.css">
+    <link rel="stylesheet" href="../07-lection5/04-input/input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Modal</title>
+</head>
+
+<body class="preload">
+    <div class="page bg-grey">
+        <header class="header">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="../index.html" class="header__logo">
+                        <svg width="110" height="32" viewBox="0 0 110 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect y="1" width="30" height="30" fill="#212429" />
+                            <rect x="38" width="32" height="32" rx="16" fill="#212429" />
+                            <path d="M78 0L110 32H78V0Z" fill="#212429" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="bg-grey">
+            <div class="container">
+                <div class="inner-page">
+                    <aside class="sidebar hidden-sm">
+                        <h4 class="mb-md">Elements</h4>
+                        <nav class="sidebar__menu">
+                            <a href="/pages/avatar.html">Avatar</a>
+                            <a href="/pages/form.html">Custom form elements</a>
+                        </nav>
+                        <h4 class="mb-md mt-md">Containers</h4>
+                        <nav class="sidebar__menu">
+                            <a href="/pages/tooltip.html">Tooltip</a>
+                            <a href="/pages/calendar.html">Calendar</a>
+                        </nav>
+                        <h4 class="mb-md mt-md">Templates</h4>
+                        <nav class="sidebar__menu">
+                            <a href="#" class="active">Modal</a>
+                            <a href="/pages/histogram.html">Histogram</a>
+                        </nav>
+                    </aside>
+                    <div class="inner-page__content bg-white box-shadow mb-xl">
+                        <div class="container container_bottom-margin">
+                            <h4 class="mb-md">Modal</h4>
+                            <div class="modal-trigger">
+                                <a class="btn btn_primary" id="modal-open" href="#modal">Open modal</a>
+                            </div>
+                            <div class="modal" id="modal">
+                                <div class="modal__dialog">
+                                    <!-- basic CSS-only modal -->
+                                    <a href="#" title="Close" class="modal__button_close">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z"
+                                                fill="#495057" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z"
+                                                fill="#495057" />
+                                        </svg>
+                                    </a>
+                                    <div class="modal__content">
+                                        <div class="modal__body">
+                                            <form class="form">
+                                                <label class="input form__control">
+                                                    <p class="input__legend">Name</p>
+                                                    <div class="input__fake">
+                                                        <input class="input__control" type="name"
+                                                            placeholder="Placeholder">
+                                                    </div>
+                                                </label>
+                                                <label class="input form__control">
+                                                    <p class="input__legend">Email</p>
+                                                    <div class="input__fake">
+                                                        <input class="input__control" type="email"
+                                                            placeholder="Placeholder">
+                                                    </div>
+                                                </label>
+                                                <button class="btn btn_primary">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <input checked="checked" id="tab1" type="radio" name="tabs" />
+                            <input id="tab2" type="radio" name="tabs" />
+                            <nav class="tabs__nav">
+                                <ul class="tabs__menu">
+                                    <li>
+                                        <label for="tab1">HTML</label>
+                                    </li>
+                                    <li>
+                                        <label for="tab2">CSS</label>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="divider"></div>
+                            <section>
+                                <div class="tabs__tab-content tabs__tab-content-1">
+                                    <figure>
+                                        <pre>
+                                            <code>
+&lt;div class="modal-trigger"&gt;
+    &lt;a class="btn btn_primary" id="modal-open" href="#modal">Open modal&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="modal" id="modal"&gt;
+    &lt;div class="modal__dialog"&gt;
+        &lt;a href="#" title="Close" class="modal__button_close"&gt;
+            &lt;svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                &lt;path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z"
+                    fill="#495057" /&gt;
+                &lt;path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z"
+                    fill="#495057" /&gt;
+            &lt;/svg&gt;
+        &lt;/a&gt;
+        &lt;div class="modal__content"&gt;
+        &lt;form class="form"&gt;
+            &lt;label class="input form__control"&gt;
+                &lt;p class="input__legend"&gt;Name&lt;/p&gt;
+                &lt;div class="input__fake"&gt;
+                    &lt;input class="input__control" type="name"
+                    placeholder="Placeholder"&gt;
+                &lt;/div&gt;
+            &lt;/label&gt;
+            &lt;label class="input form__control"&gt;
+                &lt;p class="input__legend"&gt;Email&lt;/p&gt;
+                &lt;div class="input__fake"&gt;
+                    &lt;input class="input__control" type="email"
+                    placeholder="Placeholder"&gt;
+                &lt;/div&gt;
+            &lt;/label&gt;
+            &lt;button class="btn btn_primary">Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__tab-content tabs__tab-content-2">
+                                    <figure>
+                                        <pre>
+                                            <code>
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--grey-8);
+    z-index: 888;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+                                                
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+                                                
+.modal_type_preview {
+    position: relative;
+    width: 250px;
+    padding: 1rem 1rem;
+    opacity: 1;
+    visibility: visible;
+}
+                                                
+.modal__dialog {
+    background: var(--white);
+    border-radius: 8px;
+    max-width: 450px;
+    padding: 1rem 2rem;
+    position: relative;
+    margin: 15% auto;
+}
+                                                
+.modal__dialog_type_preview {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+}
+                                                
+.modal__button_close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background-color: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.modal__button_close:hover {
+    transform: scale(1.5);
+}
+                                                
+.modal__content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: var(--white);
+}
+                                                   
+.modal__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--blue-2);
+    margin-bottom: 14px;
+}
+                                                
+.modal__body {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-4);
+} 
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-grey">
+            <div class="container">
+                <p class="text-center text-secondary mb-xl">Reusable component library</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

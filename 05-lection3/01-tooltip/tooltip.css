@@ -15,7 +15,7 @@
     left: 50%;
     transform: translate(-50%, -180%);
 
-    display: none;
+    opacity: 0;
 }
 .tooltip__bubble:after {
     content: "";
@@ -35,5 +35,9 @@
     color: var(--grey-2);
 }
 .tooltip__trigger:hover ~ .tooltip__bubble {
-    display: block;
+    opacity: 1;
+}
+
+.tooltip_force-show-helper .tooltip__bubble{
+    opacity: 1;
 }
